@@ -1,0 +1,1673 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+WindowsFormsTools
+</name>
+</assembly>
+<members>
+<member name="T:WindowsFormsTools.My.Resources.Resources">
+<summary>
+  用於查詢當地語系化字串等的強類型資源類別。
+</summary>
+</member>
+<member name="P:WindowsFormsTools.My.Resources.Resources.ResourceManager">
+<summary>
+  傳回這個類別使用的快取的 ResourceManager 執行個體。
+</summary>
+</member>
+<member name="P:WindowsFormsTools.My.Resources.Resources.Culture">
+<summary>
+  覆寫目前執行緒的 CurrentUICulture 屬性，對象是所有
+  使用這個強類型資源類別的資源查閱。
+</summary>
+</member>
+<member name="P:WindowsFormsTools.My.Resources.Resources.arrow_left_36">
+<summary>
+  查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+</summary>
+</member>
+<member name="P:WindowsFormsTools.My.Resources.Resources.arrow_left_fast_36">
+<summary>
+  查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+</summary>
+</member>
+<member name="P:WindowsFormsTools.My.Resources.Resources.arrow_right_36">
+<summary>
+  查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+</summary>
+</member>
+<member name="P:WindowsFormsTools.My.Resources.Resources.arrow_right_fast_36">
+<summary>
+  查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+</summary>
+</member>
+<member name="P:WindowsFormsTools.My.Resources.Resources.Button_down_512">
+<summary>
+  查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+</summary>
+</member>
+<member name="P:WindowsFormsTools.My.Resources.Resources.Button_up_512">
+<summary>
+  查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+</summary>
+</member>
+<member name="P:WindowsFormsTools.My.Resources.Resources.down_48">
+<summary>
+  查詢類似 (圖示) 的類型 System.Drawing.Icon 當地語系化資源。
+</summary>
+</member>
+<member name="T:WindowsFormsTools.BindingNavigatorEvent">
+ <summary>
+ 設定 BindingNavigator 的按鈕開關事件(更改Enable屬性)
+ </summary>
+</member>
+<member name="P:WindowsFormsTools.BindingNavigatorEvent.IBindingNavigatorType.BindingNavigator">
+ <summary>
+ 設定需要套用按鈕開關事件的 BindingNavigator
+ </summary>
+</member>
+<member name="P:WindowsFormsTools.BindingNavigatorEvent.IBindingNavigatorType.LabelShowMessage">
+ <summary>
+ 設定顯示訊息的ToolStripLabel
+ </summary>
+</member>
+<member name="P:WindowsFormsTools.BindingNavigatorEvent.IBindingNavigatorType.EnableBindingNavigatorListChanged">
+ <summary>
+ 是否啟用EnableBindingNavigatorListChanged。當發生EnableBindingNavigator.ListChanged，將對BindingNavigator的Button等控制項進行啟用或停用處理。預設為False
+ </summary>
+</member>
+<member name="M:WindowsFormsTools.BindingNavigatorEvent.IBindingNavigatorType.AddButtonLink(System.String,WindowsFormsTools.MyEnum.Mode,System.Boolean)">
+ <summary>
+ 設定 BindingNavigator 的按鈕開關
+ </summary>
+ <param name="ButtonName">設定 BindingNavigator 上對應的按鈕</param>
+ <param name="MyMode">設定按鈕對應的操作</param>
+ <param name="AddHandler">不加入 BindingNavigator 上的按鈕所對應的事件(可改用 CallMode 或 SetButtonMode 來手動執行按鈕事件)</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.BindingNavigatorEvent.IBindingNavigatorType.GetMode">
+ <summary>
+ 取得目前的模式(新增、修改或刪除)
+ </summary>
+</member>
+<member name="M:WindowsFormsTools.BindingNavigatorEvent.IBindingNavigatorType.Form_Load">
+ <summary>
+ 執行載入 Form 時 BindingNavigator 上的按鈕開關
+ </summary>
+</member>
+<member name="M:WindowsFormsTools.BindingNavigatorEvent.IBindingNavigatorType.CallMode(WindowsFormsTools.MyEnum.Mode)">
+ <summary>
+ 執行 BindingNavigator 上的按鈕事件(設定 BindingNavigator 的按鈕開關或控制項狀態)
+ </summary>
+ <param name="MyMode"></param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.BindingNavigatorEvent.IBindingNavigatorType.SetButtonMode(WindowsFormsTools.MyEnum.OtherBtnMode)">
+ <summary>
+ 設定觸發的事件，來決定按鈕為開或關
+ </summary>
+ <param name="MyMode"></param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.BindingNavigatorEvent.IBindingNavigatorType.AddControl(System.Windows.Forms.Control,System.Boolean)">
+ <summary>
+ 加入控制項
+ </summary>
+ <param name="MyControl">加入控制項</param>
+ <param name="KeyColumn">是否為Key欄位</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.BindingNavigatorEvent.IBindingNavigatorType.AddShowControl(System.Windows.Forms.Control,WindowsFormsTools.MyEnum.ControlMode,System.Boolean)">
+ <summary>
+ 設定在編輯狀態(Writable)或瀏覽資料狀態([ReadOnly])時，所要顯示的控制項
+ </summary>
+ <param name="MyControl"></param>
+ <param name="Mode"></param>
+ <param name="KeyColumn">是否為Key欄位</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.BindingNavigatorEvent.IBindingNavigatorType.SetWritable(System.Boolean)">
+ <summary>
+ 將有加入的控制項(AddControl)設定為[可寫]
+ </summary>
+ <param name="KeyColumnWritable">是否將Key欄位的控制項設定為[可寫]</param>
+</member>
+<member name="M:WindowsFormsTools.BindingNavigatorEvent.IBindingNavigatorType.SetReadOnly">
+ <summary>
+ 將有加入的控制項(AddControl)設定為[唯讀]
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.BindingNavigatorEvent.IBindingNavigatorType.SetVisibleTrue(WindowsFormsTools.MyEnum.ControlMode,System.Boolean,System.Boolean)">
+ <summary>
+ 將有加入的控制項(AddShowControl)設定為[顯示]
+ </summary>
+ <param name="Mode">設定要[顯示]控制項的模式</param>
+ <param name="AnotherModeVisibleFalse">另一個模式的控制項是否自動設定為[隱藏]</param>
+ <param name="KeyColumn">是否為Key欄位</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.BindingNavigatorEvent.IBindingNavigatorType.SetVisibleFalse(WindowsFormsTools.MyEnum.ControlMode,System.Boolean,System.Boolean)">
+ <summary>
+ 將有加入的控制項(AddShowControl)設定為[隱藏]
+ </summary>
+ <param name="Mode">設定要[隱藏]控制項的模式</param>
+ <param name="AnotherModeVisibleTrue">另一個模式的控制項是否自動設定為[顯示]</param>
+ <param name="KeyColumn">是否為Key欄位</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.BindingNavigatorEvent.IBindingNavigatorType.ControlTextClear">
+ <summary>
+ 清空控制項的內容(如TextBox.Text)
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:WindowsFormsTools.BindingNavigatorEvent.DefaultType">
+ <summary>
+ 預設標準類型
+ </summary>
+</member>
+<member name="M:WindowsFormsTools.BindingNavigatorEvent.DefaultType.AddControl(System.Windows.Forms.Control,System.Boolean)">
+ <summary>
+ 加入控制項
+ </summary>
+ <param name="MyControl">加入控制項</param>
+ <param name="KeyColumn">是否為Key欄位</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.BindingNavigatorEvent.DefaultType.AddShowControl(System.Windows.Forms.Control,WindowsFormsTools.MyEnum.ControlMode,System.Boolean)">
+ <summary>
+ 設定在編輯狀態(Writable)或瀏覽資料狀態([ReadOnly])時，所要顯示的控制項
+ </summary>
+ <param name="MyControl"></param>
+ <param name="Mode"></param>
+ <param name="KeyColumn">是否為Key欄位</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.BindingNavigatorEvent.DefaultType.SetWritable(System.Boolean)">
+ <summary>
+ 將有加入的控制項(AddControl)設定為[可寫]
+ </summary>
+ <param name="KeyColumnWritable">是否將Key欄位的控制項設定為[可寫]</param>
+</member>
+<member name="M:WindowsFormsTools.BindingNavigatorEvent.DefaultType.SetReadOnly">
+ <summary>
+ 將有加入的控制項(AddControl)設定為[唯讀]
+ </summary>
+</member>
+<member name="M:WindowsFormsTools.BindingNavigatorEvent.DefaultType.SetVisibleTrue(WindowsFormsTools.MyEnum.ControlMode,System.Boolean,System.Boolean)">
+ <summary>
+ 將有加入的控制項(AddShowControl)設定為[顯示]
+ </summary>
+ <param name="Mode">設定要[顯示]控制項的模式</param>
+ <param name="AnotherModeVisibleFalse">另一個模式的控制項是否自動設定為[隱藏]</param>
+ <param name="KeyColumnWritable">是否將Key欄位的控制項設定為[可寫]</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.BindingNavigatorEvent.DefaultType.SetVisibleFalse(WindowsFormsTools.MyEnum.ControlMode,System.Boolean,System.Boolean)">
+ <summary>
+ 將有加入的控制項(AddShowControl)設定為[隱藏]
+ </summary>
+ <param name="Mode">設定要[隱藏]控制項的模式</param>
+ <param name="AnotherModeVisibleTrue">另一個模式的控制項是否自動設定為[顯示]</param>
+ <param name="KeyColumnWritable">是否將Key欄位的控制項設定為[可寫]</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.BindingNavigatorEvent.DefaultType.ControlTextClear">
+ <summary>
+ 清空控制項的內容(如TextBox.Text)
+ </summary>
+</member>
+<member name="T:WindowsFormsTools.BindingNavigatorEvent.CustomType1">
+ <summary>
+ 自訂類型1
+ </summary>
+</member>
+<member name="M:WindowsFormsTools.BindingNavigatorEvent.CustomType1.AddControl(System.Windows.Forms.Control,System.Boolean)">
+ <summary>
+ 加入控制項
+ </summary>
+ <param name="MyControl">加入控制項</param>
+ <param name="KeyColumn">是否為Key欄位</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.BindingNavigatorEvent.CustomType1.AddShowControl(System.Windows.Forms.Control,WindowsFormsTools.MyEnum.ControlMode,System.Boolean)">
+ <summary>
+ 設定在編輯狀態(Writable)或瀏覽資料狀態([ReadOnly])時，所要顯示的控制項
+ </summary>
+ <param name="MyControl"></param>
+ <param name="Mode"></param>
+ <param name="KeyColumn">是否為Key欄位</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.BindingNavigatorEvent.CustomType1.SetWritable(System.Boolean)">
+ <summary>
+ 將有加入的控制項(AddControl)設定為[可寫]
+ </summary>
+ <param name="KeyColumnWritable">是否將Key欄位的控制項設定為[可寫]</param>
+</member>
+<member name="M:WindowsFormsTools.BindingNavigatorEvent.CustomType1.SetReadOnly">
+ <summary>
+ 將有加入的控制項(AddControl)設定為[唯讀]
+ </summary>
+</member>
+<member name="M:WindowsFormsTools.BindingNavigatorEvent.CustomType1.SetVisibleTrue(WindowsFormsTools.MyEnum.ControlMode,System.Boolean,System.Boolean)">
+ <summary>
+ 將有加入的控制項(AddShowControl)設定為[顯示]
+ </summary>
+ <param name="Mode">設定要[顯示]控制項的模式</param>
+ <param name="AnotherModeVisibleFalse">另一個模式的控制項是否自動設定為[隱藏]</param>
+ <param name="KeyColumnWritable">是否將Key欄位的控制項設定為[可寫]</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.BindingNavigatorEvent.CustomType1.SetVisibleFalse(WindowsFormsTools.MyEnum.ControlMode,System.Boolean,System.Boolean)">
+ <summary>
+ 將有加入的控制項(AddShowControl)設定為[隱藏]
+ </summary>
+ <param name="Mode">設定要[隱藏]控制項的模式</param>
+ <param name="AnotherModeVisibleTrue">另一個模式的控制項是否自動設定為[顯示]</param>
+ <param name="KeyColumnWritable">是否將Key欄位的控制項設定為[可寫]</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.BindingNavigatorEvent.CustomType1.ControlTextClear">
+ <summary>
+ 清空控制項的內容(如TextBox.Text)或恢復初始值
+ </summary>
+</member>
+<member name="T:WindowsFormsTools.BuildTable">
+ <summary>
+ 建立資料來源，產生 DataSet 和 BindingSource，並可重載資料
+ </summary>
+</member>
+<member name="M:WindowsFormsTools.BuildTable.OneTable.TableAdapter">
+ <summary>
+ 回傳 MyTableAdapter
+ </summary>
+</member>
+<member name="P:WindowsFormsTools.BuildTable.OneTable.ConnectionString">
+ <summary>
+ 資料庫連線字串，設定後可手動開啟連線(ConnDB.Open)，再呼叫 Select_DB 
+ </summary>
+ <value></value>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.BuildTable.OneTable.BindingSource">
+ <summary>
+ 回傳 BindingSource
+ </summary>
+</member>
+<member name="M:WindowsFormsTools.BuildTable.OneTable.DataSet">
+ <summary>
+ 回傳 DataSet
+ </summary>
+</member>
+<member name="P:WindowsFormsTools.BuildTable.OneTable.DataGridView">
+ <summary>
+ 設定 DataGridView。當使用 TableAdapterFill 時，可提供自動調整欄寬功能
+ </summary>
+</member>
+<member name="P:WindowsFormsTools.BuildTable.OneTable.CustomWidth">
+ <summary>
+ 自訂欄位寬度，這些欄位將不自動設定寬度。格式為{{ColumnName,Width}}。(當欄位小於自訂欄位寬度，會設定成自訂欄位寬度)
+ </summary>
+ <value></value>
+ <remarks></remarks>
+</member>
+<member name="P:WindowsFormsTools.BuildTable.OneTable.TableName">
+ <summary>
+ 資料庫的Table名稱(計算總筆數用，來取得限制查尋的起始及結束之數字)
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:WindowsFormsTools.BuildTable.OneTable.FillDataCount">
+ <summary>
+ 整數，表示Fill資料時需要限制幾筆。
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:WindowsFormsTools.BuildTable.OneTable.FillDataMode">
+ <summary>
+ 限制資料筆數時，指定資料來源為前端之資料或尾端之資料
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.BuildTable.OneTable.SetFillDataCount(System.String,System.Int32,WindowsFormsTools.MyEnum.FillData)">
+ <summary>
+ 限制查詢的筆數。設定後於 Build、TableAdapterReload、TableAdapterFill 這3個方法發生作用。
+ </summary>
+ <param name="myTableName">資料庫的Table名稱(計算總筆數用，來取得限制查尋的起始及結束之數字)</param>
+ <param name="myFillDataCount">整數，表示Fill資料時需要限制幾筆。</param>
+ <param name="myFillDataMode">限制資料筆數時，指定資料來源為前端之資料或尾端之資料</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.BuildTable.OneTable.SortColumnAdd(System.String,System.Windows.Forms.SortOrder)">
+ <summary>
+ 對搜索出來的資料做排序
+ </summary>
+ <param name="ColumnName">需要排序的欄位名稱</param>
+ <param name="SortOrder">排序的模式</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.BuildTable.OneTable.Build(System.String)">
+ <summary>
+ 建立資料來源
+ </summary>
+ <param name="SelectCommand">SQL語法</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.BuildTable.OneTable.Build(System.String,System.Collections.Generic.List{System.Object})">
+ <summary>
+ 建立資料來源
+ </summary>
+ <param name="SelectCommand">SQL語法</param>
+ <param name="Values">設定 OleDbCommand 的參數之值</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.BuildTable.OneTable.SetScheme(System.String)">
+ <summary>
+ 設定查詢資料的 Table 結構。需設定才能使用 bsm。
+ </summary>
+ <param name="TableName">輸入資料庫的 Table 名稱，用於尋找 PrimaryKey 欄位</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.BuildTable.OneTable.SetScheme(System.String[])">
+ <summary>
+ 設定查詢資料的 Table 結構。需設定才能使用 bsm。
+ </summary>
+ <param name="PrimaryKeyColumn">PrimaryKey欄位名稱</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.BuildTable.OneTable.SetScheme(System.Collections.Generic.List{System.String})">
+ <summary>
+ 設定查詢資料的 Table 結構。需設定才能使用 bsm。
+ </summary>
+ <param name="PrimaryKeyColumn">PrimaryKey欄位名稱</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.BuildTable.OneTable.AutoSelectCell">
+ <summary>
+ 自動選擇正確的行，程式將從Table的最後一筆開始找，如果是新增的Row，將定位於此Row
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="E:WindowsFormsTools.BuildTable.OneTable.TableAdapterFilled">
+ <summary>
+ 資料填入 TableAdapter 的關聯資料表後發生
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.BuildTable.OneTable.TableAdapterReload">
+ <summary>
+ 清空 DataTable 所有資料並將 TableAdapter 的 SELECT 命令結果重新載入到資料集。
+ </summary>
+</member>
+<member name="M:WindowsFormsTools.BuildTable.OneTable.TableAdapterReload(System.String,System.Collections.Generic.List{System.Object})">
+ <summary>
+ 清空 DataTable 所有資料並將 TableAdapter 的 SELECT 命令結果重新載入到資料集。
+ </summary>
+ <param name="SelectCommand">SQL語法</param>
+</member>
+<member name="M:WindowsFormsTools.BuildTable.OneTable.TableAdapterFill">
+ <summary>
+ 將 TableAdapter 的 SELECT 命令結果，填入 TableAdapter 的關聯資料表。
+ </summary>
+</member>
+<member name="M:WindowsFormsTools.BuildTable.OneTable.TableAdapterFill(System.String)">
+ <summary>
+ 將 TableAdapter 的 SELECT 命令結果，填入 TableAdapter 的關聯資料表。
+ </summary>
+ <param name="SelectCommand">SQL語法</param>
+</member>
+<member name="M:WindowsFormsTools.BuildTable.OneTable.TableAdapterFill(System.String,System.Collections.Generic.List{System.Object})">
+ <summary>
+ 將 TableAdapter 的 SELECT 命令結果，填入 TableAdapter 的關聯資料表。
+ </summary>
+ <param name="SelectCommand">SQL語法</param>
+</member>
+<member name="M:WindowsFormsTools.BuildTable.OneTable.FillDateToDataGridViewRow">
+ <summary>
+ 重新載入所選的資料
+ </summary>
+</member>
+<member name="M:WindowsFormsTools.BuildTable.OneTable.FillDateToDataGridViewRow(System.String)">
+ <summary>
+ 重新載入所選的資料
+ </summary>
+ <param name="SelectCommand">載入資料的SQL(最好只含所選的資料，速度才會快)</param>
+</member>
+<member name="M:WindowsFormsTools.BuildTable.OneTable.FillDateToDataGridViewRow(System.String,System.Collections.Generic.List{System.Object})">
+ <summary>
+ 重新載入所選的資料
+ </summary>
+ <param name="SelectCommand">載入資料的SQL(最好只含所選的資料，速度才會快)</param>
+</member>
+<member name="M:WindowsFormsTools.BuildTable.TwoTables.TableAdapter">
+ <summary>
+ 回傳 MyTableAdapter
+ </summary>
+</member>
+<member name="P:WindowsFormsTools.BuildTable.TwoTables.ConnectionString">
+ <summary>
+ 資料庫連線字串，設定後可手動開啟連線(ConnDB.Open)，再呼叫 Select_DB 
+ </summary>
+ <value></value>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.BuildTable.TwoTables.BindingSourceM">
+ <summary>
+ 回傳主表 BindingSource
+ </summary>
+</member>
+<member name="M:WindowsFormsTools.BuildTable.TwoTables.BindingSourceD">
+ <summary>
+ 回傳子表 BindingSource
+ </summary>
+</member>
+<member name="M:WindowsFormsTools.BuildTable.TwoTables.DataSet">
+ <summary>
+ 回傳 DataSet
+ </summary>
+</member>
+<member name="P:WindowsFormsTools.BuildTable.TwoTables.DataGridView1">
+ <summary>
+ 設定主表 DataGridView。當使用 TableAdapterFill 時，可提供自動調整欄寬功能
+ </summary>
+</member>
+<member name="P:WindowsFormsTools.BuildTable.TwoTables.DataGridView2">
+ <summary>
+ 設定子表 DataGridView。當使用 TableAdapterFill 時，可提供自動調整欄寬功能
+ </summary>
+</member>
+<member name="P:WindowsFormsTools.BuildTable.TwoTables.CustomWidthM">
+ <summary>
+ 表頭自訂欄位寬度，這些欄位將不自動設定寬度。格式為{{ColumnName,Width}}。(當欄位小於自訂欄位寬度，會設定成自訂欄位寬度)
+ </summary>
+ <value></value>
+ <remarks></remarks>
+</member>
+<member name="P:WindowsFormsTools.BuildTable.TwoTables.CustomWidthD">
+ <summary>
+ 表身自訂欄位寬度，這些欄位將不自動設定寬度。格式為{{ColumnName,Width}}。(當欄位小於自訂欄位寬度，會設定成自訂欄位寬度)
+ </summary>
+ <value></value>
+ <remarks></remarks>
+</member>
+<member name="P:WindowsFormsTools.BuildTable.TwoTables.FillDataCount">
+ <summary>
+ (僅表頭)整數，表示Fill資料時需要限制幾筆。
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:WindowsFormsTools.BuildTable.TwoTables.FillDataMode">
+ <summary>
+ (僅表頭)限制資料筆數時，指定資料來源為前端之資料或尾端之資料
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.BuildTable.TwoTables.SetFillDataCount(System.String,System.Int32,WindowsFormsTools.MyEnum.FillData)">
+ <summary>
+ (僅表頭)限制查詢的筆數。設定後於 Build、TableAdapterReload、TableAdapterFill 這3個方法發生作用。
+ </summary>
+ <param name="myTableName">資料庫的Table名稱(計算總筆數用，來取得限制查尋的起始及結束之數字)</param>
+ <param name="myFillDataCount">整數，表示Fill資料時需要限制幾筆。</param>
+ <param name="myFillDataMode">限制資料筆數時，指定資料來源為前端之資料或尾端之資料</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.BuildTable.TwoTables.SortColumnAdd(System.String,System.Windows.Forms.SortOrder)">
+ <summary>
+ (僅表頭)對搜索出來的資料做排序
+ </summary>
+ <param name="ColumnName">需要排序的欄位名稱</param>
+ <param name="SortOrder">排序的模式</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.BuildTable.TwoTables.Build(System.String,System.String)">
+ <summary>
+ 建立資料來源
+ </summary>
+ <param name="SelectCommandM">SQL語法</param>
+ <param name="SelectCommandD">SQL語法</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.BuildTable.TwoTables.Build(System.String,System.String,System.Collections.Generic.List{System.Object},System.Collections.Generic.List{System.Object})">
+ <summary>
+ 建立資料來源
+ </summary>
+ <param name="SelectCommandM">SQL語法</param>
+ <param name="SelectCommandD">SQL語法</param>
+ <param name="ValuesM">設定 OleDbCommandM 的參數之值</param>
+ <param name="ValuesD">設定 OleDbCommandD 的參數之值</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.BuildTable.TwoTables.SetScheme(System.String,System.String,System.String[],System.String[])">
+ <summary>
+ 設定查詢資料的 Table 結構。需設定才能使用 bsm。
+ </summary>
+ <param name="TableNameM">連結兩表的欄位(Key欄位)-主表</param>
+ <param name="TableNameD">連結兩表的欄位(Key欄位)-子表</param>
+ <param name="ParentColumn">連結兩表的欄位(Key欄位)-主表</param>
+ <param name="ChildColumn">連結兩表的欄位(Key欄位)-子表</param>
+</member>
+<member name="M:WindowsFormsTools.BuildTable.TwoTables.SetScheme(System.String[],System.String[],System.String[],System.String[])">
+ <summary>
+ 設定查詢資料的 Table 結構。需設定才能使用 bsm。
+ </summary>
+ <param name="ParentColumn">連結兩表的欄位(Key欄位)-主表</param>
+ <param name="ChildColumn">連結兩表的欄位(Key欄位)-子表</param>
+ <param name="PrimaryKeyColumnM">主表PrimaryKey欄位名稱</param>
+ <param name="PrimaryKeyColumnD">子表PrimaryKey欄位名稱</param>
+</member>
+<member name="M:WindowsFormsTools.BuildTable.TwoTables.SetScheme(System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String})">
+ <summary>
+ 設定查詢資料的 Table 結構。需設定才能使用 bsm。
+ </summary>
+ <param name="ParentColumn">連結兩表的欄位(Key欄位)-主表</param>
+ <param name="ChildColumn">連結兩表的欄位(Key欄位)-子表</param>
+ <param name="PrimaryKeyColumnM">主表PrimaryKey欄位名稱</param>
+ <param name="PrimaryKeyColumnD">子表PrimaryKey欄位名稱</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.BuildTable.TwoTables.AutoSelectCell">
+ <summary>
+ 自動選擇正確的行
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="E:WindowsFormsTools.BuildTable.TwoTables.TableAdapterFilled">
+ <summary>
+ 資料填入 TableAdapter 的關聯資料表後發生
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.BuildTable.TwoTables.TableAdapterReload(System.String)">
+ <summary>
+ 將 TableAdapter 的 SELECT 命令結果重新載入到資料集。
+ </summary>
+ <param name="ConnStr">資料庫連線字串</param>
+</member>
+<member name="M:WindowsFormsTools.BuildTable.TwoTables.TableAdapterReload(System.String,System.String)">
+ <summary>
+ 將 TableAdapter 的 SELECT 命令結果重新載入到資料集。
+ </summary>
+ <param name="SelectCommandM">SQL語法-主表</param>
+ <param name="SelectCommandD">SQL語法-子表</param>
+</member>
+<member name="M:WindowsFormsTools.BuildTable.TwoTables.TableAdapterReload(System.String,System.String,System.Collections.Generic.List{System.Object},System.Collections.Generic.List{System.Object})">
+ <summary>
+ 將 TableAdapter 的 SELECT 命令結果重新載入到資料集。
+ </summary>
+ <param name="SelectCommandM">SQL語法-主表</param>
+ <param name="SelectCommandD">SQL語法-子表</param>
+ <param name="ValuesM">設定 OleDbCommandM 的參數之值</param>
+ <param name="ValuesD">設定 OleDbCommandD 的參數之值</param>
+</member>
+<member name="M:WindowsFormsTools.BuildTable.TwoTables.TableAdapterFill">
+ <summary>
+ 將 TableAdapter 的 SELECT 命令結果，填入 TableAdapter 的關聯資料表。
+ </summary>
+</member>
+<member name="M:WindowsFormsTools.BuildTable.TwoTables.TableAdapterFill(System.String,System.String)">
+ <summary>
+ 將 TableAdapter 的 SELECT 命令結果，填入 TableAdapter 的關聯資料表。
+ </summary>
+ <param name="SelectCommandM">SQL語法-主表</param>
+ <param name="SelectCommandD">SQL語法-子表</param>
+</member>
+<member name="M:WindowsFormsTools.BuildTable.TwoTables.TableAdapterFill(System.String,System.String,System.Collections.Generic.List{System.Object},System.Collections.Generic.List{System.Object})">
+ <summary>
+ 將 TableAdapter 的 SELECT 命令結果，填入 TableAdapter 的關聯資料表。
+ </summary>
+ <param name="SelectCommandM">SQL語法-主表</param>
+ <param name="SelectCommandD">SQL語法-子表</param>
+ <param name="ValuesM">設定 OleDbCommandM 的參數之值</param>
+ <param name="ValuesD">設定 OleDbCommandD 的參數之值</param>
+</member>
+<member name="M:WindowsFormsTools.BuildTable.TwoTables.FillDateToDataGridViewRow">
+ <summary>
+ 重新載入所選的資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.BuildTable.TwoTables.FillDateToDataGridViewRow(System.String,System.String)">
+ <summary>
+ 重新載入所選的資料
+ </summary>
+ <param name="SelectCommandM">輸入載入此筆表頭的資料</param>
+ <param name="SelectCommandD">輸入載入此筆表頭的表身資料</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.BuildTable.TwoTables.FillDateToDataGridViewRow(System.String,System.String,System.Collections.Generic.List{System.Object},System.Collections.Generic.List{System.Object})">
+ <summary>
+ 重新載入所選的資料
+ </summary>
+ <param name="SelectCommandM">輸入載入此筆表頭的資料</param>
+ <param name="SelectCommandD">輸入載入此筆表頭的表身資料</param>
+ <param name="ValuesM">設定 OleDbCommandM 的參數之值</param>
+ <param name="ValuesD">設定 OleDbCommandD 的參數之值</param>
+ <remarks></remarks>
+</member>
+<member name="T:WindowsFormsTools.ChangeProgressBarValue">
+ <summary>
+ 將 ProgressBar 設定依時間間隔來變更 Value
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.ChangeProgressBarValue.#ctor(System.Windows.Forms.ProgressBar)">
+ <summary>
+ 
+ </summary>
+ <param name="SetProgressBar">設定要顯示執行進度的ProgressBar</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.ChangeProgressBarValue.#ctor(System.Int32)">
+ <summary>
+ 
+ </summary>
+ <param name="SetInterval">設定在一個總數中迴圈時，多少間隔回應一次(毫秒)，預設為30</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.ChangeProgressBarValue.#ctor(System.Windows.Forms.ProgressBar,System.Int32)">
+ <summary>
+ 
+ </summary>
+ <param name="SetProgressBar">設定要顯示文字的Label</param>
+ <param name="SetInterval">設定在一個總數中迴圈時，多少間隔回應一次(毫秒)，預設為30</param>
+ <remarks></remarks>
+</member>
+<member name="P:WindowsFormsTools.ChangeProgressBarValue.ProgressBar">
+ <summary>
+ 設定要顯示文字的Label
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:WindowsFormsTools.ChangeProgressBarValue.Interval">
+ <summary>
+ 設定在一個總數中迴圈時，多少間隔回應一次(毫秒)，預設為30
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.ChangeProgressBarValue.ShowMsgInterval(System.Int32)">
+ <summary>
+ 回傳目前 Interval 是否超過設定的值
+ </summary>
+ <param name="Interval">設定回應的時間間隔(毫秒)</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.ChangeProgressBarValue.SetProgressBarRange(System.Int32,System.Int32)">
+ <summary>
+ 設定 ProgressBar 的最大值及最小值
+ </summary>
+ <param name="setMin">設定 ProgressBar.Minimum</param>
+ <param name="setMax">設定 ProgressBar.Maximum</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.ChangeProgressBarValue.SetProgressBarRange(System.Int32,System.Int32,System.Threading.Tasks.TaskScheduler)">
+ <summary>
+ (非同步) 設定 ProgressBar 的最大值及最小值
+ </summary>
+ <param name="setMin">設定 ProgressBar.Minimum</param>
+ <param name="setMax">設定 ProgressBar.Maximum</param>
+ <param name="uiContext">(Task)非同步用，可與目前的UI傳遞上下文，可用來處理跨執行緒更新</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.ChangeProgressBarValue.ChangeValue(System.Int32)">
+ <summary>
+ 更改 ProgressBar.Value，無 Interval 限制，只要有設定 Value 必定會更改
+ </summary>
+ <param name="value">要更改的 Value</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.ChangeProgressBarValue.ChangeValue(System.Int32,System.Threading.Tasks.TaskScheduler)">
+ <summary>
+ (非同步) 更改 ProgressBar.Value，無 Interval 限制，只要有設定 Value 必定會更改
+ </summary>
+ <param name="value">要更改的 Value</param>
+ <param name="uiContext">(Task)非同步用，可與目前的UI傳遞上下文，可用來處理跨執行緒更新</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.ChangeProgressBarValue.ChangeValueByInterval(System.Int32,System.Threading.Tasks.TaskScheduler)">
+ <summary>
+ (非同步) 依 Interval 設定的值，來更改 ProgressBar.Value
+ </summary>
+ <param name="value">要更改的 Value</param>
+ <param name="uiContext">(Task)非同步用，可與目前的UI傳遞上下文，可用來處理跨執行緒更新</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.ChangeProgressBarValue.FinishJob">
+ <summary>
+ 填滿進度條
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.ChangeProgressBarValue.FinishJob(System.Threading.Tasks.TaskScheduler)">
+ <summary>
+ 填滿進度條
+ </summary>
+ <param name="uiContext"></param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.ChangeProgressBarValue.ClearJob">
+ <summary>
+ 清空進度條
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.ChangeProgressBarValue.ClearJob(System.Threading.Tasks.TaskScheduler)">
+ <summary>
+ 清空進度條
+ </summary>
+ <param name="uiContext"></param>
+ <remarks></remarks>
+</member>
+<member name="T:WindowsFormsTools.ChangeLabelText">
+ <summary>
+ 將Label設定為顯示訊息的元件
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.ChangeLabelText.#ctor(System.Windows.Forms.Label)">
+ <summary>
+ 
+ </summary>
+ <param name="SetLabel">設定要顯示文字的Label</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.ChangeLabelText.#ctor(System.Int32)">
+ <summary>
+ 
+ </summary>
+ <param name="SetInterval">設定在一個總數中迴圈時，多少間隔回應一次(毫秒)，預設為30</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.ChangeLabelText.#ctor(System.Windows.Forms.Label,System.Int32)">
+ <summary>
+ 
+ </summary>
+ <param name="SetLabel">設定要顯示文字的Label</param>
+ <param name="SetInterval">設定在一個總數中迴圈時，多少間隔回應一次(毫秒)，預設為30</param>
+ <remarks></remarks>
+</member>
+<member name="P:WindowsFormsTools.ChangeLabelText.Label">
+ <summary>
+ 設定要顯示文字的Label
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:WindowsFormsTools.ChangeLabelText.Interval">
+ <summary>
+ 設定在一個總數中迴圈時，多少間隔回應一次(毫秒)，預設為30
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.ChangeLabelText.ShowMsgInterval(System.Int32)">
+ <summary>
+ 回傳目前 Interval 是否超過設定的值
+ </summary>
+ <param name="Interval">設定回應的時間間隔(毫秒)</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.ChangeLabelText.ChangeTextByInterval(System.String)">
+ <summary>
+ 依 Interval 設定的值，來更改 Label.Text 的文字
+ </summary>
+ <param name="txt">要顯示的文字</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.ChangeLabelText.ChangeTextByInterval(System.String,System.Threading.Tasks.TaskScheduler)">
+ <summary>
+ (非同步) 依 Interval 設定的值，來更改 Label.Text 的文字
+ </summary>
+ <param name="txt">要顯示的文字</param>
+ <param name="uiContext">(Task)非同步用，可與目前的UI傳遞上下文，可用來處理跨執行緒更新</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.ChangeLabelText.ChangeText(System.String)">
+ <summary>
+ 更改 Label.Text 的文字，無 Interval 限制，只要有更改必定會顯示
+ </summary>
+ <param name="txt">要顯示的文字</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.ChangeLabelText.ChangeText(System.String,System.Threading.Tasks.TaskScheduler)">
+ <summary>
+ (非同步) 更改 Label.Text 的文字，無 Interval 限制，只要有更改必定會顯示
+ </summary>
+ <param name="txt">要顯示的文字</param>
+ <param name="uiContext">(Task)非同步用，可與目前的UI傳遞上下文，可用來處理跨執行緒更新</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.ControlTools.BindingSourceToDataTable(System.Windows.Forms.BindingSource)">
+ <summary>
+ 將 BindingSource 轉型成 DataTable
+ </summary>
+ <param name="sender">要轉換的 BindingSource</param>
+ <returns></returns>
+</member>
+<member name="M:WindowsFormsTools.ControlTools.CheckDataExist(System.Windows.Forms.Control)">
+ <summary>
+ <para>檢查控制項有無輸入</para>
+ <para>用法：將要檢查的控制項帶入此Function</para>
+ </summary>
+ <param name="Control">帶入要檢查有無輸入的控制項</param>
+ <returns>無資料則傳回False，有資料傳回True</returns>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.ControlTools.CheckDataExist(System.Windows.Forms.Control[])">
+ <summary>
+ <para>檢查控制項有無輸入</para>
+ <para>用法：將要檢查的控制項陣列帶入此Function</para>
+ </summary>
+ <param name="Control">帶入要檢查有無輸入的控制項陣列</param>
+ <returns>無資料則傳回False，有資料傳回True</returns>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.ControlTools.ControlTextClear(System.Windows.Forms.Control)">
+ <summary>
+ 清空TextBox、ComboBox等控制項的內容(Text或Value)
+ </summary>
+ <param name="Control">加入將要清空的控制項</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.ControlTools.ControlTextClear(System.Windows.Forms.Control[])">
+ <summary>
+ 清空TextBox、ComboBox等控制項的內容(Text或Value)
+ </summary>
+ <param name="Control">加入將要清空的控制項陣列</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.ControlTools.ControlReadT(System.Windows.Forms.Control)">
+ <summary>
+ 將TextBox、ComboBox等控制項更改為[不可編輯]狀態
+ </summary>
+ <param name="Control">帶入將要更改為[不可編輯]的控制項</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.ControlTools.ControlReadT(System.Windows.Forms.Control[])">
+ <summary>
+ 將TextBox、ComboBox等控制項更改為[不可編輯]狀態
+ </summary>
+ <param name="Control">帶入將要更改為[不可編輯]的控制項陣列</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.ControlTools.ControlReadF(System.Windows.Forms.Control)">
+ <summary>
+ 將TextBox、ComboBox等控制項更改為[可以編輯]狀態
+ </summary>
+ <param name="Control">帶入將要更改為[可以編輯]的控制項</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.ControlTools.ControlReadF(System.Windows.Forms.Control[])">
+ <summary>
+ 將TextBox、ComboBox等控制項更改為[可以編輯]狀態
+ </summary>
+ <param name="Control">帶入將要更改為[可以編輯]的控制項陣列</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.ControlTools.DataGridViewToDataTable(System.Windows.Forms.DataGridView,System.String,System.Boolean)">
+ <summary>
+ 將DataGridView轉成DataTable
+ </summary>
+ <param name="dgv">要轉換的DataGridView</param>
+ <param name="tblName">設定DataTable的Name</param>
+ <param name="ShowInvisibleColumns">是否要輸出隱藏的欄位，預設值為否</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.ControlTools.DataGridViewToDataTable(System.Windows.Forms.DataGridView,System.String,System.Boolean,System.Boolean)">
+ <summary>
+ 將DataGridView轉成DataTable
+ </summary>
+ <param name="dgv">要轉換的DataGridView</param>
+ <param name="tblName">設定DataTable的Name</param>
+ <param name="ShowInvisibleColumns">是否要輸出隱藏的欄位，預設值為否</param>
+ <param name="UseHeaderText">設定欄位名稱，True 則使用 HeaderText，False 為 ColumnName</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.ControlTools.HScrollBarVisible(System.Windows.Forms.Control)">
+ <summary>
+ 檢查控制項存不存在水平捲軸
+ </summary>
+ <param name="InputControl"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.ControlTools.VScrollBarVisible(System.Windows.Forms.Control)">
+ <summary>
+ 檢查控制項存不存在垂直捲軸
+ </summary>
+ <param name="InputControl"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.ControlTools.GetControlsName(System.Windows.Forms.Control,System.Type)">
+ <summary>
+ 回傳Form或Panel之類的容器上的所有控制項的名稱(.Name)
+ </summary>
+ <param name="MyControl">輸入控制項所在的Form或Panel之類的容器</param>
+ <param name="FindControlType">設定要尋找的控制項Type。若無設定則回傳所有的控制項名稱</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.ControlTools.SetControlEnabled(System.Windows.Forms.Control,System.Boolean,System.Threading.Tasks.TaskScheduler,System.Type[],System.String[])">
+ <summary>
+ (非同步) 對Form或Panel之類的容器上的所有控制項的Enabled屬性，設定為True或False
+ </summary>
+ <param name="MyControl">輸入控制項所在的Form或Panel之類的容器</param>
+ <param name="Enabled">設定控制項的Enabled屬性為True或False</param>
+ <param name="uiContext">(Task)非同步用，可與目前的UI傳遞上下文，可用來處理跨執行緒更新</param>
+ <param name="ControlType">輸入要更改Enabled屬性的控制項Type，輸入格式為Type陣列，
+ 如 {GetType(ComboBox), GetType(DateTimePicker), GetType(CheckBox), GetType(Button)}</param>
+ <param name="ControlName">輸入要更改Enabled屬性的控制項Name，輸入格式為文字陣列，
+ 如 {"Btn_ExportExcel_01", "Btn_ExportSQLCMD"}</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.ControlTools.SetControlEnabled(System.Windows.Forms.Control,System.Boolean,System.Type[],System.String[])">
+ <summary>
+ 對Form或Panel之類的容器上的所有控制項的Enabled屬性，設定為True或False
+ </summary>
+ <param name="MyControl">輸入控制項所在的Form或Panel之類的容器</param>
+ <param name="Enabled">設定控制項的Enabled屬性為True或False</param>
+ <param name="ControlType">輸入要更改Enabled屬性的控制項Type，輸入格式為Type陣列，
+ 如 {GetType(ComboBox), GetType(DateTimePicker), GetType(CheckBox), GetType(Button)}</param>
+ <param name="ControlName">輸入要更改Enabled屬性的控制項Name，輸入格式為文字陣列，
+ 如 {"Btn_ExportExcel_01", "Btn_ExportSQLCMD"}</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.ControlTools.delay(System.Double)">
+ <summary>
+ 延遲(Delay)語法
+ </summary>
+ <param name="Interval">輸入要延遲(Delay)的時間，以毫秒為單位</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.ControlTools.ShowLog(System.String,System.String,System.Boolean)">
+ <summary>
+ 將要顯示的字串存成log檔並打開
+ </summary>
+ <param name="Message">帶入要顯示的字串</param>
+ <param name="FileName">欲儲存的檔案名稱，如無填入就以當時的時間(yyyy-MM-dd_HHmmss)來當做檔名</param>
+ <param name="Del_OldFile">如遇相同檔名，是否要取代或繼續填入</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.ControlTools.WriteLog(System.String,System.String,System.String,System.Boolean,System.Boolean)">
+ <summary>
+ 將要顯示的字串存成log檔
+ </summary>
+ <param name="Message">帶入要顯示的字串</param>
+ <param name="FilePath">欲儲存的檔案路徑，如無填入就設為Application.StartupPath</param>
+ <param name="FileName">欲儲存的檔案名稱，如無填入就以當時的時間(yyyy-MM-dd_HHmmss)來當做檔名</param>
+ <param name="Del_OldFile">如遇相同檔名，是否要取代或繼續填入</param>
+ <param name="OpenFile">是否開啟檔案</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.ControlTools.ExportCSV(System.Data.DataTable,System.String,System.String,System.Boolean)">
+ <summary>
+ 將DataTable轉成CSV檔並匯出
+ </summary>
+ <param name="dt">輸入要轉存CSV的DataTable</param>
+ <param name="FilePath">欲儲存的檔案路徑，如無填入就設為Application.StartupPath</param>
+ <param name="FileName">欲儲存的檔案名稱，如無填入就以當時的時間(yyyy-MM-dd_HHmmss)來當做檔名</param>
+ <param name="OpenFile">是否開啟檔案</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.ControlTools.FileOpened(System.String)">
+ <summary>
+ 驗證檔案有無開啟，有開啟為True，沒有開啟為False
+ </summary>
+ <param name="Name">檔案路徑</param>
+ <returns>檔案有開啟為True，沒有開啟為False</returns>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.ChoiceList.SetSelected(System.Collections.Generic.List{System.String})">
+ <summary>
+ 設定所選擇的值
+ </summary>
+ <param name="item"></param>
+ <remarks></remarks>
+</member>
+<member name="P:WindowsFormsTools.FormTextBox.Title">
+ <summary>
+ 標題文字，如"請貼入訂單資訊"
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:WindowsFormsTools.FormTextBox.DialogResult">
+ <summary>
+ 取得或設定表單的對話方塊結果
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:WindowsFormsTools.Dialog_GetDateAndUserId.UserName">
+ <summary>
+ 設定登入系統之使用者名稱
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:WindowsFormsTools.Dialog_GetDateAndUserId.GetDate">
+ <summary>
+ 取得時間
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:WindowsFormsTools.Dialog_GetDateAndUserId.FilterUserId">
+ <summary>
+ 是否限制使用者
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:WindowsFormsTools.Dialog_GetDateAndUserId.DialogResult">
+ <summary>
+ 取得或設定表單的對話方塊結果
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="F:WindowsFormsTools.SearchDialog4.DataType.str">
+ <summary>
+ 字串
+ </summary>
+</member>
+<member name="F:WindowsFormsTools.SearchDialog4.DataType.num">
+ <summary>
+ 數字
+ </summary>
+</member>
+<member name="P:WindowsFormsTools.SearchDialog4.SqlType">
+ <summary>
+ 設定SQL的類型。預設為MSSQL
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.SearchDialog4.AddControls(System.String,System.String,WindowsFormsTools.SearchDialog4.ControlsType,System.Boolean)">
+ <summary>
+ 加入元件，元件排列順序為加入之順序
+ </summary>
+ <param name="SetColumnsName">SQL中的Column名稱</param>
+ <param name="SetColumnstext">Column的中文名稱</param>
+ <param name="SetAddControl">設定要使用哪一種元件</param>
+ <param name="FocusAfterShow">當呼叫此Form後，是否Focus到這個控制項</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.SearchDialog4.AddControls(System.String,System.String,WindowsFormsTools.SearchDialog4.DataType,WindowsFormsTools.SearchDialog4.ControlsType,System.Boolean)">
+ <summary>
+ 加入元件，元件排列順序為加入之順序
+ </summary>
+ <param name="SetColumnsName">SQL中的Column名稱</param>
+ <param name="SetColumnstext">Column的中文名稱</param>
+ <param name="ColumnDataType">依欄位的DataType來提供可用之邏輯運算符號。</param>
+ <param name="SetAddControl">設定要使用哪一種元件</param>
+ <param name="FocusAfterShow">當呼叫此Form後，是否Focus到這個控制項</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.SearchDialog4.AddControls(System.String,System.String,WindowsFormsTools.SearchDialog4.ControlsType,System.Data.DataTable,System.Boolean)">
+ <summary>
+ 加入元件，元件排列順序為加入之順序
+ </summary>
+ <param name="SetColumnsName">SQL中的Column名稱</param>
+ <param name="SetColumnstext">Column的中文名稱</param>
+ <param name="SetAddControl">設定要使用哪一種元件</param>
+ <param name="SetDataSource">如果使用了ComboBox，需再設定DateSource。
+ 請使用DataTable，限定為兩個欄位。第一個欄位為要搜索的值，第二欄位為要顯示的值</param>
+ <param name="FocusAfterShow">當呼叫此Form後，是否Focus到這個控制項</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.SearchDialog4.AddControls(System.String,System.String,WindowsFormsTools.SearchDialog4.DataType,WindowsFormsTools.SearchDialog4.ControlsType,System.Data.DataTable,System.Boolean)">
+ <summary>
+ 加入元件，元件排列順序為加入之順序
+ </summary>
+ <param name="SetColumnsName">SQL中的Column名稱</param>
+ <param name="SetColumnstext">Column的中文名稱</param>
+ <param name="ColumnDataType">依欄位的DataType來提供可用之邏輯運算符號。</param>
+ <param name="SetAddControl">設定要使用哪一種元件</param>
+ <param name="SetDataSource">如果使用了ComboBox，需再設定DateSource。
+ 請使用DataTable，限定為兩個欄位。第一個欄位為要搜索的值，第二欄位為要顯示的值</param>
+ <param name="FocusAfterShow">當呼叫此Form後，是否Focus到這個控制項</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.SearchDialog4.AddControls(System.String,System.String,System.String,WindowsFormsTools.SearchDialog4.ControlsType,System.Data.DataTable,System.Boolean)">
+ <summary>
+ 加入元件，元件排列順序為加入之順序
+ </summary>
+ <param name="SetColumnsName">SQL中的Column名稱</param>
+ <param name="SetColumnstext">Column的中文名稱</param>
+ <param name="SetExpression">提供可用之運算符號，以空白來分割。如"= like"</param>
+ <param name="SetAddControl">設定要使用哪一種元件</param>
+ <param name="SetDataSource">如果使用了ComboBox，需再設定DateSource。
+ 請使用DataTable，限定為兩個欄位。第一個欄位為要搜索的值，第二欄位為要顯示的值</param>
+ <param name="FocusAfterShow">當呼叫此Form後，是否Focus到這個控制項</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.SearchDialog4.ClearValue">
+ <summary>
+ 清除所有輸入的值
+ </summary>
+</member>
+<member name="P:WindowsFormsTools.SelectDialog.DataSource">
+ <summary>
+ 設定欲選取項目之資料來源
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.SelectDialog.SetColumnsVisible(System.String)">
+ <summary>
+ 設定要隱藏的DataGridView.Column，輸入格式為一維陣列
+ </summary>
+ <param name="ColumnName">輸入要隱藏的欄位名稱陣列</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.SelectDialog.SetColumnsVisible(System.String[])">
+ <summary>
+ 設定要隱藏的DataGridView.Column
+ </summary>
+ <param name="ColumnName">輸入要隱藏的欄位名稱</param>
+ <remarks></remarks>
+</member>
+<member name="P:WindowsFormsTools.SelectDialog.ValueColumn">
+ <summary>
+ 設定DataGridView的回傳值欄位
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:WindowsFormsTools.SelectDialog.TextColumn">
+ <summary>
+ 設定DataGridView的回傳值說明欄位
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.SelectDialog.SetHeaderText(System.String,System.String)">
+ <summary>
+ 設定DataGridView的HeaderText
+ </summary>
+ <param name="ColumnName"></param>
+ <param name="HeaderText"></param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.SelectDialog.SetHeaderText(System.String[],System.String[])">
+ <summary>
+ 設定DataGridView的HeaderText
+ </summary>
+ <param name="ColumnName">輸入要更改的欄位 ColumnName 陣列</param>
+ <param name="HeaderText">輸入要更改的 HeaderText 陣列</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.SelectDialog.SetHeaderText(System.String[0:,0:])">
+ <summary>
+ 設定DataGridView的HeaderText
+ </summary>
+ <param name="ColumnName_HeaderText">輸入格式為二維陣列，如：{{""要更改的欄位ColumnName"",""要更改的HeaderText""},{""要更改的欄位ColumnName"",""要更改的HeaderText""}}</param>
+ <remarks></remarks>
+</member>
+<member name="P:WindowsFormsTools.SelectDialog.ComboBoxSelectColumn">
+ <summary>
+ 設定預設要過濾的DataGridView.Column.Name
+ </summary>
+ <value></value>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.SelectDialog.SetSelectDialog(System.Object,System.String[0:,0:],System.String,System.String,System.String,System.String[])">
+ <summary>
+ 設定單選Form的各項屬性
+ </summary>
+ <param name="Set_DataSource">設定DataGridView的DataSource</param>
+ <param name="Set_HeaderText">設定DataGridView的HeaderText。格式：{DataGridView的Name, HeaderText}</param>
+ <param name="Set_ValueColumn">設定DataGridView的回傳值欄位</param>
+ <param name="Set_TextColumn">設定DataGridView的回傳值說明欄位</param>
+ <param name="Set_ComboBoxSelectColumn">設定預設要過濾的DataGridView.Column.Name</param>
+ <param name="Set_ColumnsVisible">設定要隱藏的DataGridView.Column</param>
+ <remarks></remarks>
+</member>
+<member name="P:WindowsFormsTools.SelectDialog.SelectedValue">
+ <summary>
+ 依據ValueColumn所設定的欄位，回傳DataGridView所選的值
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:WindowsFormsTools.SelectDialog.SelectedText">
+ <summary>
+ 依據TextColumn所設定的欄位，回傳DataGridView所選的值之說明
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:WindowsFormsTools.SelectDialog.RowsSelected">
+ <summary>
+ 設定DataGridView所選擇的row
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:WindowsFormsTools.SelectDialog.AdjustColumnWidthToFillAvailableSpace">
+ <summary>
+ 指定要調整寬度的欄位名稱，來填滿剩餘的空間。
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.DataTypeExtensions.DataTable(System.Windows.Forms.BindingSource)">
+ <summary>
+ 將 BindingSource 轉型成 DataTable
+ </summary>
+ <param name="sender">要轉換的 BindingSource</param>
+ <returns></returns>
+</member>
+<member name="F:WindowsFormsTools.MyEnum.Mode.DoNothing">
+ <summary>
+ 按鈕不做任何觸發動作，也不會被觸發動作
+ </summary>
+</member>
+<member name="F:WindowsFormsTools.MyEnum.Mode.New">
+ <summary>
+ 
+ </summary>
+</member>
+<member name="F:WindowsFormsTools.MyEnum.Mode.Edit">
+ <summary>
+ 
+ </summary>
+</member>
+<member name="F:WindowsFormsTools.MyEnum.Mode.Delete">
+ <summary>
+ 
+ </summary>
+</member>
+<member name="F:WindowsFormsTools.MyEnum.Mode.Save">
+ <summary>
+ 
+ </summary>
+</member>
+<member name="F:WindowsFormsTools.MyEnum.Mode.Cancel">
+ <summary>
+ 
+ </summary>
+</member>
+<member name="F:WindowsFormsTools.MyEnum.Mode.Search">
+ <summary>
+ 
+ </summary>
+</member>
+<member name="F:WindowsFormsTools.MyEnum.Mode.Refresh">
+ <summary>
+ 
+ </summary>
+</member>
+<member name="F:WindowsFormsTools.MyEnum.Mode.EnabledTrueOnWrite">
+ <summary>
+ 在模式為[寫入][編輯]時，按鈕為開(Enabled=True)
+ </summary>
+</member>
+<member name="F:WindowsFormsTools.MyEnum.Mode.EnabledTrueOnReadOnly">
+ <summary>
+ 在模式為[唯讀]時，按鈕為開(Enabled=True)
+ </summary>
+</member>
+<member name="F:WindowsFormsTools.MyEnum.Mode.AlwaysEnabledTrue">
+ <summary>
+ 按鈕在任何模式下，按鈕總是開(Enabled=True)
+ </summary>
+</member>
+<member name="F:WindowsFormsTools.MyEnum.Mode.AlwaysEnabledFalse">
+ <summary>
+ 按鈕在任何模式下，按鈕總是關(Enabled=False)
+ </summary>
+</member>
+<member name="T:WindowsFormsTools.MyEnum.OtherBtnMode">
+ <summary>
+ 其他按鈕的模式(為了設定按鈕在其模式下所觸發的開關)。Writable = 編輯狀態；ReadOnly = 瀏覽資料狀態
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:WindowsFormsTools.MyEnum.OtherBtnMode.Writable">
+ <summary>
+ 編輯狀態
+ </summary>
+</member>
+<member name="F:WindowsFormsTools.MyEnum.OtherBtnMode.ReadOnly">
+ <summary>
+ 瀏覽資料狀態
+ </summary>
+</member>
+<member name="T:WindowsFormsTools.MyEnum.ControlMode">
+ <summary>
+ Writable = 編輯狀態；ReadOnly = 瀏覽資料狀態
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:WindowsFormsTools.MyEnum.ControlMode.Writable">
+ <summary>
+ 編輯狀態
+ </summary>
+</member>
+<member name="F:WindowsFormsTools.MyEnum.ControlMode.ReadOnly">
+ <summary>
+ 瀏覽資料狀態
+ </summary>
+</member>
+<member name="T:WindowsFormsTools.MyEnum.FillData">
+ <summary>
+ 指定從頭開始或從尾端開始
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:WindowsFormsTools.MyEnum.FillData.FromStart">
+ <summary>
+ 指定從頭開始
+ </summary>
+</member>
+<member name="F:WindowsFormsTools.MyEnum.FillData.FromEnd">
+ <summary>
+ 指定從尾端開始
+ </summary>
+</member>
+<member name="M:WindowsFormsTools.MyEventHandler.TextBox_Ctrl_A_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+ <summary>
+ 讓TextBox可使用Ctrl+A來全選
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.MyEventHandler.SetTextBox_Ctrl_A_KeyDown(System.Windows.Forms.Control,System.String[])">
+ <summary>
+ 對Form或Panel之類的容器上的TextBox加入KeyDown事件，功能為TextBox可使用Ctrl+A來全選
+ </summary>
+ <param name="MyControl">輸入控制項所在的Form或Panel之類的容器
+ 如 {GetType(ComboBox), GetType(DateTimePicker), GetType(CheckBox), GetType(Button)}</param>
+ <param name="Skip_ControlName">輸入要更改Enabled屬性的控制項Name，輸入格式為文字陣列，
+ 如 {"Btn_ExportExcel_01", "Btn_ExportSQLCMD"}</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.MyStyle.DataGridViewStyle.DGV_default(System.Windows.Forms.DataGridView,WindowsFormsTools.MyStyle.DataGridViewStyle.ReadOnlyType,System.Boolean)">
+ <summary>
+ 設定DataGridView的外觀及屬性
+ </summary>
+ <param name="dgv">帶入要設定的DataGridView</param>
+ <param name="RowHeadersVisible">是否要顯示包含資料列行首的資料行</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.MyStyle.DataGridViewStyle.SetColumnType(System.Windows.Forms.DataGridView,System.Array,System.Boolean)">
+ <summary>
+ 更改DataGridView的Columns的Type
+ </summary>
+ <param name="MyDataGridView">載入要更改的DataGridView</param>
+ <param name="DgvColumns">載入要更改的Columns Type(DataGridViewButtonColumn)陣列，
+ 例：{{BtnColumn_TL003, "TL003"}</param>
+ <param name="CheckBoxBindingDataBase">CheckBox是否要連結DataSource的欄位(預設的值為 Y 與 N)</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.MyStyle.DataGridViewStyle.SetColumnType(System.Windows.Forms.DataGridView,System.Windows.Forms.DataGridViewButtonColumn,System.String)">
+ <summary>
+ 更改DataGridView的Columns的Type
+ </summary>
+ <param name="MyDataGridView">載入要更改的DataGridView</param>
+ <param name="DgvColumns">載入要更改的Columns Type(DataGridViewButtonColumn)</param>
+ <param name="ColumnsName">載入要更改的Columns Name</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.MyStyle.DataGridViewStyle.SetColumnType(System.Windows.Forms.DataGridView,System.Windows.Forms.DataGridViewCheckBoxColumn,System.String,System.Boolean)">
+ <summary>
+ 更改DataGridView的Columns的Type
+ </summary>
+ <param name="MyDataGridView">載入要更改的DataGridView</param>
+ <param name="DgvColumns">載入要更改的Columns Type(DataGridViewCheckBoxColumn)</param>
+ <param name="ColumnsName">載入要更改的Columns Name</param>
+ <param name="BindingDataBase">是否要連結DataSource的欄位(預設的值為 Y 與 N)</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.MyStyle.DataGridViewStyle.SetDataGridView(System.Windows.Forms.DataGridView,System.Array,System.Array,System.Array,System.Array,System.Array,System.Array,System.Array)">
+ <summary>
+ 更改DataGridView的欄位Style及設定預設寬度
+ </summary>
+ <param name="MyDataGridView">帶入要更改的DataGridView</param>
+ <param name="ColumnsName">更改欄位名</param>
+ <param name="Columns_Visible">隱藏欄位</param>
+ <param name="Columns_DisplayedCells">設定自動欄寬</param>
+ <param name="Columns_SetWidth">設定欄寬</param>
+ <param name="AlignmentRight">欄位值靠右</param>
+ <param name="AlignmentCenter">欄位值置中</param>
+ <param name="CellStyleFormat">欄位值以金額格式顯示</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.MyStyle.DataGridViewStyle.SetColumnsWidth(System.Windows.Forms.DataGridView,System.Collections.Generic.Dictionary{System.String,System.Int32},System.Boolean)">
+ <summary>
+ 自動設定DataGridView的每一個Columns的寬度
+ </summary>
+ <param name="MyDataGridView">帶入要設定寬度的DataGridView</param>
+ <param name="CustomWidth">自訂欄位寬度，這些欄位將不自動設定寬度。Key為ColumnName；Value為Column Width。(當欄位小於自訂欄位寬度，會設定成自訂欄位寬度)</param>
+ <param name="SetMinimumWidth">是否將未包含在CustomWidth的所有Column設為最小寬度</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.MyStyle.DataGridViewStyle.AdjustColumnWidthToFillAvailableSpace(System.Windows.Forms.DataGridView,System.String)">
+ <summary>
+ 調整欄位寬度去填滿剩餘的空間
+ </summary>
+ <param name="MyDataGridView">加入要調整的DataGridView</param>
+ <param name="ColumnName">指定要調整寬度的欄位名稱</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.MyStyle.DataGridViewStyle.GetHScrollBarMaximum(System.Windows.Forms.DataGridView)">
+ <summary>
+ 取得 DataGridView 水平捲軸的最大值
+ </summary>
+ <param name="MyDataGridView"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.MyStyle.DataGridViewStyle.GetVScrollBarMaximum(System.Windows.Forms.DataGridView)">
+ <summary>
+ 取得 DataGridView 垂直捲軸的最大值
+ </summary>
+ <param name="MyDataGridView"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.MyStyle.DataGridViewStyle.CreateDisplayIndex(System.Windows.Forms.DataGridView)">
+ <summary>
+ 產生DataGridView欄位位置設定
+ </summary>
+ <param name="MyDataGridView">輸入要取得DisplayIndex的DataGridView</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.MyStyle.DataGridViewStyle.LoadDisplayIndex(System.String,System.Windows.Forms.DataGridView)">
+ <summary>
+ 載入自訂的DataGridView欄位位置
+ </summary>
+ <param name="MyDisplayIndex">DataGridView欄位位置設定</param>
+ <param name="MyDataGridView">輸入要調整的DataGridView</param>
+ <remarks></remarks>
+</member>
+<member name="T:WindowsFormsTools.MyStyle.OpenFileDialogStyle.FileFilter">
+ <summary>
+ 檔案類型
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.MyStyle.OpenFileDialogStyle.SetDefault(System.Windows.Forms.OpenFileDialog,WindowsFormsTools.MyStyle.OpenFileDialogStyle.FileFilter,System.Boolean)">
+ <summary>
+ 設定 OpenFileDialog 的屬性
+ </summary>
+ <param name="myOpenFileDialog">傳入要設定的 OpenFileDialog</param>
+ <param name="Filter">設定目前的檔名篩選類型，以決定出現在對話方塊中 [另存檔案類型] 或 [檔案類型] 方塊的選項。</param>
+ <param name="Multiselect">設定對話方塊是否允許選取多個檔案，預設為 False。</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.MyStyle.OpenFileDialogStyle.SetDefault(System.Windows.Forms.OpenFileDialog,System.String,System.String,System.Boolean)">
+ <summary>
+ 設定 OpenFileDialog 的屬性
+ </summary>
+ <param name="myOpenFileDialog">傳入要設定的 OpenFileDialog</param>
+ <param name="FilterFileName">設定目前要篩選的副檔名 (如:txt)，以決定出現在對話方塊中 [另存檔案類型] 或 [檔案類型] 方塊的選項。</param>
+ <param name="FilterFileNameStr">設定目前要篩選的副檔名說明文字 (如:文字檔)，以決定出現在對話方塊中 [另存檔案類型] 或 [檔案類型] 方塊的選項。</param>
+ <param name="Multiselect">設定對話方塊是否允許選取多個檔案，預設為 False。</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.MyStyle.OpenFileDialogStyle.SetDefault(System.Windows.Forms.OpenFileDialog,System.String[],System.String,System.Boolean)">
+ <summary>
+ 設定 OpenFileDialog 的屬性
+ </summary>
+ <param name="myOpenFileDialog">傳入要設定的 OpenFileDialog</param>
+ <param name="FilterFileName">設定目前要篩選的副檔名陣列 (如:txt)，以決定出現在對話方塊中 [另存檔案類型] 或 [檔案類型] 方塊的選項。</param>
+ <param name="FilterFileNameStr">設定目前要篩選的副檔名說明文字 (如:文字檔)，以決定出現在對話方塊中 [另存檔案類型] 或 [檔案類型] 方塊的選項。</param>
+ <param name="Multiselect">設定對話方塊是否允許選取多個檔案，預設為 False。</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.MyStyle.OpenFileDialogStyle.SetDefault(System.Windows.Forms.OpenFileDialog,System.String,System.Boolean)">
+ <summary>
+ 設定 OpenFileDialog 的屬性
+ </summary>
+ <param name="myOpenFileDialog">傳入要設定的 OpenFileDialog</param>
+ <param name="Filter">設定目前的檔名篩選字串，以決定出現在對話方塊中 [另存檔案類型] 或 [檔案類型] 方塊的選項。</param>
+ <param name="Multiselect">設定對話方塊是否允許選取多個檔案，預設為 False。</param>
+ <remarks></remarks>
+</member>
+<member name="T:WindowsFormsTools.MyStyle.SaveFileDialogStyle.FileFilter">
+ <summary>
+ 檔案類型
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.MyStyle.SaveFileDialogStyle.SetDefault(System.Windows.Forms.SaveFileDialog,WindowsFormsTools.MyStyle.SaveFileDialogStyle.FileFilter)">
+ <summary>
+ 設定 SaveFileDialog 的屬性
+ </summary>
+ <param name="mySaveFileDialog">傳入要設定的 SaveFileDialog</param>
+ <param name="Filter">設定目前的檔名篩選類型，以決定出現在對話方塊中 [另存檔案類型] 或 [檔案類型] 方塊的選項。</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.MyStyle.SaveFileDialogStyle.SetDefault(System.Windows.Forms.SaveFileDialog,System.String,System.String)">
+ <summary>
+ 設定 SaveFileDialog 的屬性
+ </summary>
+ <param name="mySaveFileDialog">傳入要設定的 SaveFileDialog</param>
+ <param name="FilterFileName">設定目前要篩選的副檔名 (如:txt)，以決定出現在對話方塊中 [另存檔案類型] 或 [檔案類型] 方塊的選項。</param>
+ <param name="FilterFileNameStr">設定目前要篩選的副檔名說明文字 (如:文字檔)，以決定出現在對話方塊中 [另存檔案類型] 或 [檔案類型] 方塊的選項。</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.MyStyle.SaveFileDialogStyle.SetDefault(System.Windows.Forms.SaveFileDialog,System.String[],System.String)">
+ <summary>
+ 設定 SaveFileDialog 的屬性
+ </summary>
+ <param name="mySaveFileDialog">傳入要設定的 SaveFileDialog</param>
+ <param name="FilterFileName">設定目前要篩選的副檔名陣列 (如:txt)，以決定出現在對話方塊中 [另存檔案類型] 或 [檔案類型] 方塊的選項。</param>
+ <param name="FilterFileNameStr">設定目前要篩選的副檔名說明文字 (如:文字檔)，以決定出現在對話方塊中 [另存檔案類型] 或 [檔案類型] 方塊的選項。</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.MyStyle.SaveFileDialogStyle.SetDefault(System.Windows.Forms.SaveFileDialog,System.String)">
+ <summary>
+ 設定 SaveFileDialog 的屬性
+ </summary>
+ <param name="mySaveFileDialog">傳入要設定的 SaveFileDialog</param>
+ <param name="Filter">設定目前的檔名篩選字串，以決定出現在對話方塊中 [另存檔案類型] 或 [檔案類型] 方塊的選項。</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.ToolStripBtn.CheckDateExist(System.Object)">
+ <summary>
+ <para>檢查控制項有無輸入</para>
+ <para>用法：將要檢查的控制項加入至陣列，並帶入此Function</para>
+ </summary>
+ <param name="MyControls">將要檢查的控制項加入至陣列並帶入</param>
+ <returns>無資料則傳回False，有資料傳回True</returns>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.ToolStripBtn.DataBindings(System.Object[],System.Windows.Forms.BindingSource)">
+ <summary>
+ 將TextBox、ComboBox等控制項與BindingSource做連結(DataBindings)
+ </summary>
+ <param name="MyControls">將要連結的控制項加入至陣列並帶入</param>
+ <param name="bsm">帶入要連結的BindingSource</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.ToolStripBtn.DisDataBindings(System.Object[])">
+ <summary>
+ 取消TextBox、ComboBox等控制項與BindingSource的連結(DataBindings)
+ </summary>
+ <param name="MyControls">將要"取消"連結的控制項加入至陣列並帶入</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.ToolStripBtn.TextBoxClear(System.Object[])">
+ <summary>
+ 清空TextBox、ComboBox等控制項的內容(Text或Value)
+ </summary>
+ <param name="MyControls">將要清空的控制項加入至陣列並帶入</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.ToolStripBtn.TextBoxReadT(System.Object[])">
+ <summary>
+ 將TextBox、ComboBox等控制項更改為[不可編輯]狀態
+ </summary>
+ <param name="MyControls">將要更改為[不可編輯]的控制項加入至陣列並帶入</param>
+ <remarks></remarks>
+</member>
+<member name="M:WindowsFormsTools.ToolStripBtn.TextBoxReadF(System.Object[],System.Object[])">
+ <summary>
+ 將TextBox、ComboBox等控制項更改為[可以編輯]狀態
+ </summary>
+ <param name="MyControls">將要更改為[可以編輯]的控制項加入至陣列並帶入</param>
+ <param name="TextBoxReadF_Exclude">要排除的控制項</param>
+ <remarks></remarks>
+</member>
+<member name="P:WindowsFormsTools.DataSelect.SelectedValue">
+ <summary>
+ "依據ValueColumn所設定的欄位，回傳DataGridView所選的值"
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:WindowsFormsTools.DataSelect.SelectedText">
+ <summary>
+ 依據TextColumn所設定的欄位，回傳DataGridView所選的值之說明
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:WindowsFormsTools.DataSelect.AdjustColumnWidthToFillAvailableSpace">
+ <summary>
+ 指定要調整寬度的欄位名稱，來填滿剩餘的空間。
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+</members>
+</doc>

@@ -1,0 +1,735 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Module_Tool
+</name>
+</assembly>
+<members>
+<member name="T:ModuleTool.My.Resources.Resources">
+<summary>
+  用於查詢當地語系化字串等的強類型資源類別。
+</summary>
+</member>
+<member name="P:ModuleTool.My.Resources.Resources.ResourceManager">
+<summary>
+  傳回這個類別使用的快取的 ResourceManager 執行個體。
+</summary>
+</member>
+<member name="P:ModuleTool.My.Resources.Resources.Culture">
+<summary>
+  覆寫目前執行緒的 CurrentUICulture 屬性，對象是所有
+  使用這個強類型資源類別的資源查閱。
+</summary>
+</member>
+<member name="M:ModuleTool.DateTools.Check_FormatString_To_Date(System.String,System.String)">
+ <summary>
+ 驗證時間格式
+ </summary>
+ <param name="DateTimeStr">輸入時間字串，如20141231 (※必須輸入年月日3個，才能驗證)</param>
+ <param name="format">輸入對應的格式(Format)，如yyyyMMdd (※(西曆)只接受yyyy、MM、dd 3種)</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.DateTools.CheckTaiwanCalendar(System.Int32,System.Int32,System.Int32,System.Boolean)">
+ <summary>
+ 驗證民國(台灣曆法)是否正確。True = 正確；False = 不正確
+ </summary>
+ <param name="twyear">民國年</param>
+ <param name="twmonth">民國月</param>
+ <param name="twday">民國日</param>
+ <param name="ShowErrorMessage">是否顯示錯誤訊息</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.DateTools.CheckTaiwanCalendar(System.String,System.Boolean)">
+ <summary>
+ 驗證民國(台灣曆法)是否正確。True = 正確；False = 不正確
+ </summary>
+ <param name="twdate">民國日期，年月日之間需有分格符號(例：105.01.06；105/01/06)</param>
+ <param name="ShowErrorMessage">是否顯示錯誤訊息</param>
+ <returns></returns>s
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.DateTools.CheckLunarTwEra(System.Int32,System.Int32,System.Int32,System.Boolean)">
+ <summary>
+ 驗證民國農曆是否正確。True = 正確；False = 不正確
+ </summary>
+ <param name="luyear">農曆民國年</param>
+ <param name="lumonth">農曆月</param>
+ <param name="luday">農曆日</param>
+ <param name="ShowErrorMessage">是否顯示錯誤訊息</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.DateTools.Check_AD_To_TaiwanCalendar(System.DateTime,System.Boolean)">
+ <summary>
+ 西曆轉換為民國年+西元月日(台灣曆法)是否正確。True = 正確；False = 不正確
+ </summary>
+ <param name="SolarDate">輸入欲轉換之(西元)日期</param>
+ <param name="ShowErrorMessage">是否顯示錯誤訊息</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.DateTools.Check_AD_To_LunarTwEra(System.DateTime,System.Boolean)">
+ <summary>
+ 驗證西曆轉民國農曆是否正確。True = 正確；False = 不正確
+ </summary>
+ <param name="SolarDate">輸入欲轉換成農曆之(西元)日期</param>
+ <param name="ShowErrorMessage">是否顯示錯誤訊息</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.DateTools.Get_AD_To_TaiwanCalendar(System.DateTime,System.String)">
+ <summary>
+ 西曆轉換為民國年+西元月日(台灣曆法)。如 2015.12.30 => 104.12.30
+ </summary>
+ <param name="x">時間格式(DateTime)</param>
+ <param name="OutputFormat">定義輸出格式化。如無值則預設為yMMdd</param>
+ <returns></returns>
+</member>
+<member name="M:ModuleTool.DateTools.Get_AD_To_LunarTwEra(System.DateTime,System.String)">
+ <summary>
+ 西曆轉民國農曆
+ </summary>
+ <param name="SolarDate">輸入欲轉換成農曆之(西元)日期</param>
+ <param name="OutputFormat">定義輸出格式化。如無值則預設為yMMdd</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:ModuleTool.DateTools.Enum_GetChiCalendar">
+ <summary>
+ 輸出類型
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.DateTools.Get_AD_To_ChiCalendar(System.DateTime,ModuleTool.DateTools.Enum_GetChiCalendar)">
+ <summary>
+ 西曆轉農曆(輸出為中文)
+ </summary>
+ <param name="MyDate">時間格式(DateTime)</param>
+<param name="OutputType">0 = 生肖, 1 = 天干地支, 2 = 月, 3 = 日, 4 = 農曆民國年, 99 = 完整時間格式</param>
+ <returns></returns>
+</member>
+<member name="M:ModuleTool.DateTools.Get_TaiwanCalendar_to_AD(System.Int32,System.Int32,System.Int32,System.String)">
+ <summary>
+ 民國(台灣曆法)轉西曆，輸入為字串
+ </summary>
+ <param name="twyear">民國年</param>
+ <param name="twmonth">民國月</param>
+ <param name="twday">民國日</param>
+ <param name="OutputFormat">定義輸出格式化。如無值則預設為yyyyMMdd</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.DateTools.Get_TaiwanCalendar_to_AD(System.Int32,System.Int32,System.Int32)">
+ <summary>
+ 民國(台灣曆法)轉西曆，輸出為日期格式
+ </summary>
+ <param name="twyear">民國年</param>
+ <param name="twmonth">民國月</param>
+ <param name="twday">民國日</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.DateTools.Get_TaiwanCalendar_to_AD(System.String,System.String)">
+ <summary>
+ 民國(台灣曆法)轉西曆，輸入為字串
+ </summary>
+ <param name="DateString">民國日期(字串格式)</param>
+ <param name="OutputFormat">定義輸出格式化。如無值則預設為yyyyMMdd</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.DateTools.Get_TaiwanCalendar_to_AD(System.String)">
+ <summary>
+ 民國(台灣曆法)轉西曆，輸出為日期格式
+ </summary>
+ <param name="DateString">民國日期(字串格式)</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.DateTools.Get_LunarTwEra_To_AD(System.Int32,System.Int32,System.Int32,System.String,System.Boolean)">
+ <summary>
+ 民國農曆轉西曆，輸出為字串
+ </summary>
+ <param name="luyear">農曆民國年</param>
+ <param name="lumonth">農曆月</param>
+ <param name="luday">農曆日</param>
+ <param name="OutputFormat">定義輸出格式化。如無值則預設為yyyyMMdd</param>
+ <param name="IsLeapMonth">農曆月份是否為閏月，預設為 False</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.DateTools.Get_LunarTwEra_To_AD(System.Int32,System.Int32,System.Int32,System.Boolean)">
+ <summary>
+ 民國農曆轉西曆，輸出為日期格式
+ </summary>
+ <param name="luyear">農曆民國年</param>
+ <param name="lumonth">農曆月</param>
+ <param name="luday">農曆日</param>
+ <param name="IsLeapMonth">農曆月份是否為閏月，預設為 False</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.DateTools.GetChiTime(System.Int32,System.Int32)">
+ <summary>
+ 時間轉時辰(地支)。如 00:20 = 子；01:20 = 丑
+ </summary>
+ <param name="Hour">小時(24小時制)</param>
+ <param name="Minute">分</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.DateTools.Get_FormatString_To_Date(System.String,System.String)">
+ <summary>
+ 從格式化字串轉換成時間格式
+ </summary>
+ <param name="DateTimeStr">輸入時間字串，如20141231 (※必須輸入年月日3個，才能驗證)</param>
+ <param name="format">輸入對應的格式(Format)，如yyyyMMdd (※(西曆)只接受yyyy、MM、dd 3種)</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.DateTools.GetFirstDayOfMonth(System.DateTime)">
+ <summary>
+ 取得該月的第一天的日期
+ </summary>
+ <param name="InputDate">輸入欲取得日期的月份</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.DateTools.GetLastDayOfMonth(System.DateTime)">
+ <summary>
+ 取得該月的最後一天的日期
+ </summary>
+ <param name="InputDate">輸入欲取得日期的月份</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.DateTools.GetDayOfWeek(System.DateTime,System.DayOfWeek)">
+ <summary>
+ 取得日期在該週為星期幾
+ </summary>
+ <param name="dt">輸入欲取得星期的日期</param>
+ <param name="DayOfWeek">設定要使用哪一天為一週的第一天。預設為星期一。</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.DateTools.GetWeekOfYear(System.DateTime,System.DayOfWeek)">
+ <summary>
+ 取得日期在當年為第幾週
+ </summary>
+ <param name="dt">輸入欲取得週數的日期</param>
+ <param name="DayOfWeek">設定要使用哪一天為一週的第一天。預設為星期一。</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.DateTools.GetWeekOfMonth(System.DateTime,System.DayOfWeek)">
+ <summary>
+ 取得日期在當月為第幾週
+ </summary>
+ <param name="dt">輸入欲取得週數的日期</param>
+ <param name="DayOfWeek">設定要使用哪一天為一週的第一天。預設為星期一。</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.DateTools.GetWeekAmountOfMonth(System.Int32,System.Int32,System.DayOfWeek)">
+ <summary>
+ 取得該月有多少週
+ </summary>
+ <param name="year">輸入欲取得週數的年份(西元)</param>
+ <param name="month">輸入欲取得週數的月份(西元)</param>
+ <param name="DayOfWeek">設定要使用哪一天為一週的第一天。預設為星期一。</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.DateTools.GetWeekAmountOfYear(System.Int32,System.DayOfWeek)">
+ <summary>
+ 取得該年有多少週
+ </summary>
+ <param name="year">輸入欲取得週數的西元年份</param>
+ <param name="DayOfWeek">設定要使用哪一天為一週的第一天。預設為星期一。</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.ExceptionClass.GetExceptionMessage(System.Exception)">
+ <summary>
+ 取得例外訊息
+ </summary>
+ <param name="ex"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.Ini.GetIniString(System.String,System.String,System.String,System.Boolean)">
+ <summary>
+ 取得ini檔案之值(ASCII格式)
+ </summary>
+ <param name="Section">Section(有用[]包起來的)</param>
+ <param name="Key">Key，設定值之項目</param>
+ <param name="IniFilePath">Ini檔案路徑</param>
+ <param name="UseUnicode">設定寫入值為 Unicode 或 ASCII。True 為 Unicode；False 為 ASCII，預設為 Unicode</param>
+</member>
+<member name="M:ModuleTool.Ini.WriteIniString(System.String,System.String,System.String,System.String,System.Boolean)">
+ <summary>
+ 寫入值至ini檔
+ </summary>
+ <param name="Section">Section(有用[]包起來的)</param>
+ <param name="Key">Key，設定值之項目</param>
+ <param name="WriteString">欲寫入之值</param>
+ <param name="IniFilePath">Ini檔案路徑</param>
+ <param name="UseUnicode">設定寫入值為 Unicode 或 ASCII。True 為 Unicode；False 為 ASCII，預設為 Unicode</param>
+</member>
+<member name="M:ModuleTool.Ini.DeleteIniKey(System.String,System.String,System.String,System.Boolean)">
+ <summary>
+ 刪除ini檔的KEY
+ </summary>
+ <param name="Section">Section(有用[]包起來的)</param>
+ <param name="Key">Key，設定值之項目</param>
+ <param name="IniFilePath">Ini檔案路徑</param>
+ <param name="UseUnicode">設定寫入值為 Unicode 或 ASCII。True 為 Unicode；False 為 ASCII，預設為 Unicode</param>
+</member>
+<member name="M:ModuleTool.Ini.GetIniSection(System.String,System.String)">
+ <summary>
+ 取得 Section 的所有項目
+ </summary>
+ <param name="Section">Section(有用[]包起來的)</param>
+ <param name="IniFilePath">Ini檔案路徑</param>
+</member>
+<member name="M:ModuleTool.MailClass.SendMail(System.String,System.String,System.String[0:,0:],System.String,System.String[0:,0:],System.String,System.String,System.String[0:,0:],System.String[0:,0:],System.Boolean)">
+ <summary>
+ 發送E-Mail
+ </summary>
+ <param name="Host">SMTP 交易的主機名稱或 IP 位址</param>
+ <param name="SMTP_Port">SMTP交易的連接埠</param>
+ <param name="From">寄件者E-Mail地址及顯示名稱，輸入為二維字串陣列。如 {("test1@gmail.com", "高雄鹽埕旭"}}</param>
+ <param name="FromPassword">寄件者E-Mail登入密碼</param>
+ <param name="To">收件者E-Mail地址及顯示名稱，輸入為二維字串陣列。如 {{"test2@gmail.com", "億載金城武"}}</param>
+ <param name="Subject">主題</param>
+ <param name="Body">內文</param>
+ <param name="CC">副本E-Mail地址及顯示名稱，輸入為二維字串陣列。如 {("test3@gmail.com", "苗栗小五郎"}}</param>
+ <param name="Bcc">隱藏收件者E-Mail地址及顯示名稱，輸入為二維字串陣列。如 {("test4@gmail.com", "永康蔡康永"}}</param>
+ <param name="EnableSsl">是否開啟SSL驗證</param>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.MailClass.SendMail(System.String,System.String,System.Net.Mail.MailAddress,System.String,System.Net.Mail.MailAddressCollection,System.String,System.String,System.Net.Mail.MailAddressCollection,System.Net.Mail.MailAddressCollection,System.Boolean)">
+ <summary>
+ 發送E-Mail
+ </summary>
+ <param name="Host">SMTP 交易的主機名稱或 IP 位址</param>
+ <param name="SMTP_Port">SMTP交易的連接埠</param>
+ <param name="From">寄件者E-Mail地址</param>
+ <param name="FromPassword">寄件者E-Mail登入密碼</param>
+ <param name="To">收件者E-Mail地址，輸入為字串陣列</param>
+ <param name="Subject">主題</param>
+ <param name="Body">內文</param>
+ <param name="CC">副本</param>
+ <param name="Bcc">隱藏收件者</param>
+ <param name="EnableSsl">是否開啟SSL驗證</param>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.Printer.GetDefaultPrinterName">
+ <summary>
+ 取得本機預設的印表機名稱
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.Printer.GetPrinterName(System.String)">
+ <summary>
+ 取得本機所有的印表機名稱
+ </summary>
+ <param name="FirstPrinter">設定要排在第一列的印表機。無輸入的話則將預設印表機排至第一列</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.Printer.GetPaperSizeOfPrinter(System.String,System.String)">
+ <summary>
+ 取得印表機所支援的紙張大小
+ </summary>
+ <param name="PrinterName">輸入本機印表機名稱</param>
+ <param name="FirstPaperSize">設定要排在第一列的紙張大小。無輸入的話則將預設紙張大小排至第一列</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.Printer.GetPaperSize(System.String,System.String)">
+ <summary>
+ 取得 PaperSize 的 rawKind
+ </summary>
+ <param name="strPrinterName"></param>
+ <param name="strPaperName"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.RandomClass.NextDouble">
+ <summary>
+ 產生0-1之間的實數亂數，由Random.NextDouble()實做
+ </summary>
+ <returns>0-1之間的亂數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.RandomClass.NextDouble(System.Double,System.Double)">
+ <summary>
+ 產生指定範圍內的亂數，由Random.NextDouble()實做
+ </summary>
+ <param name="minValue">開始值</param>
+ <param name="maxValue">結束值</param>
+ <returns>亂數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.RandomClass.Next(System.Int32,System.Int32)">
+ <summary>
+ 產生指定範圍內的整數亂數(包含最小值但不包括最大值，如需產生最大值請自行+1)，由Random.Next()實做
+ </summary>
+ <param name="minValue">開始值</param>
+ <param name="maxValue">結束值(亂數不包括最大值，如需產生最大值請自行+1)</param>
+ <returns>整數亂數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.RandomClass.NextPNOne">
+ <summary>
+ 隨機產生 1 或 -1
+ </summary>
+ <returns>隨機的 1 或 -1</returns>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.SqlClient.Select_DB(System.String,System.String)">
+ <summary>
+ MSSQL資料庫 Select 操作 (使用SqlDataAdapter)
+ </summary>
+ <param name="ConnStr">連線字串 ConnectionString，字串不能有Provider</param>
+ <param name="cmd">SQL語法，限定Select</param>
+ <returns>帶出搜尋的資料；輸出格式為DataView</returns>
+</member>
+<member name="M:ModuleTool.SqlClient.Update_DB(System.String,System.String)">
+ <summary>
+ MSSQL資料庫 Insert、Update、Delete 操作 (使用SqlDataAdapter)
+ </summary>
+ <param name="ConnStr">連線字串 ConnectionString，字串不能有Provider</param>
+ <param name="cmd">MSSQL語法，可為 Insert、Update、Delete</param>
+</member>
+<member name="M:ModuleTool.TaskClass.Run(System.Action,System.Threading.Tasks.TaskScheduler)">
+ <summary>
+ 
+ </summary>
+ <param name="setMethod"></param>
+ <param name="uiContext"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.TaskClass.Run(System.Action)">
+ <summary>
+ 
+ </summary>
+ <param name="setMethod"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.TaskClass.Run(System.Action,System.Threading.CancellationTokenSource)">
+ <summary>
+ 
+ </summary>
+ <param name="setMethod"></param>
+ <param name="cts"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.TaskClass.Run(System.Action,System.Threading.CancellationTokenSource,System.Threading.Tasks.TaskScheduler,System.Threading.Tasks.TaskCreationOptions)">
+ <summary>
+ 
+ </summary>
+ <param name="setMethod"></param>
+ <param name="cts"></param>
+ <param name="uiContext"></param>
+ <param name="setTaskCreationOptions"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.TaskClass.Run(System.Action,System.Threading.CancellationToken,System.Threading.Tasks.TaskScheduler,System.Threading.Tasks.TaskCreationOptions)">
+ <summary>
+ 
+ </summary>
+ <param name="setMethod"></param>
+ <param name="token"></param>
+ <param name="uiContext"></param>
+ <param name="setTaskCreationOptions"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.Tools.ToSimplified(System.String)">
+ <summary>
+ 轉簡體
+ </summary>
+ <param name="argSource"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.Tools.ToTraditional(System.String)">
+ <summary>
+ 轉繁體
+ </summary>
+ <param name="argSource"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.Tools.GetNumberToCn(System.Decimal,System.Boolean)">
+ <summary>
+ 阿拉伯數字轉成國字大小寫 (※大小寫以1來表示 => 大寫:壹；小寫:一)
+ </summary>
+ <param name="numPric">阿拉伯數字</param>
+ <param name="ConvertBigLetter">是否轉換成大寫國字</param>
+ <returns>輸出國字之數字</returns>
+</member>
+<member name="M:ModuleTool.Tools.GetMathResult(System.String)">
+ <summary>
+ <para>直接剖析輸入之運算式字串，並且求出其結果</para>
+ <para>如輸入 2 > 1，則回傳 True；</para>
+ <para>如輸入 1 > 2，則回傳 False；</para>
+ <para>如輸入 1 + 2，則回傳 3；</para>
+ </summary>
+ <param name="Math_String"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.Tools.FileOpened(System.String)">
+ <summary>
+ 驗證檔案有無開啟，有開啟為True，沒有開啟為False
+ </summary>
+ <param name="Name">檔案路徑</param>
+ <returns>檔案有開啟為True，沒有開啟為False</returns>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.Tools.Cmd(System.String)">
+ <summary>
+ 執行Command語法
+ </summary>
+ <param name="Command">輸入Command語法</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.Tools.Local_IP">
+ <summary>
+ 找到本機的IP
+ </summary>
+ <returns>回傳本機的IP</returns>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.Tools.MidByte(System.String,System.Int32,System.Int32)">
+ <summary>
+ 依Byte長度截取字串
+ </summary>
+ <param name="strSrc">輸入欲截取的字串</param>
+ <param name="Start">要傳回字元的開始位置,最小值為1</param>
+ <param name="Length">要傳回的字元數。如果省略或是文字中的字元數量 (包括在位置 Start 上的字元) 少於 Length，則會傳回從開始位置至字串結尾的所有字元。</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.Tools.CopyFile(System.String,System.String,System.Boolean,System.Boolean)">
+ <summary>
+ 複製檔案
+ </summary>
+ <param name="Source">來源檔案路徑</param>
+ <param name="Destination">目的地檔案路徑</param>
+ <param name="Overwrite">是否覆寫已存在的檔案</param>
+ <param name="ShowError">作業時出現錯誤是否中止並顯示錯誤訊息</param>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.Tools.CopyDirectory(System.String,System.String,System.Boolean,System.Boolean)">
+ <summary>
+ '複製資料夾內的所有檔案
+ </summary>
+ <param name="Source">來源資料夾路徑</param>
+ <param name="Destination">目的地資料夾路徑</param>
+ <param name="Overwrite">是否覆寫已存在的檔案</param>
+ <param name="ShowError">作業時出現錯誤是否中止並顯示錯誤訊息</param>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.Tools.DataTableAddBlankRow(System.Data.DataTable)">
+ <summary>
+ 在 DataTable 第0列插入空的一列(值為 DBNull.Value)
+ </summary>
+ <param name="DataTable"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.Tools.ShowMsgInterval(System.Int32)">
+ <summary>
+ 設定在一個總數中迴圈時，多少間隔回應一次(毫秒)
+ </summary>
+ <param name="Interval">設定回應的時間間隔(毫秒)</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="E:ModuleTool.Txt.ProgressMessages">
+ <summary>
+ 回傳資料庫操作之進度訊息
+ </summary>
+ <param name="str">當前資料庫操作之狀態訊息</param>
+ <remarks></remarks>
+</member>
+<member name="P:ModuleTool.Txt.Progress">
+ <summary>
+ 回傳執行進度
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:ModuleTool.Txt.FilePath">
+ <summary>
+ 設定要載入的文字檔路徑
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="F:ModuleTool.Txt._OpenFileDialogTitle">
+ <summary>
+ 當找不到文字檔時，彈出的[開啟檔案]視窗的標題文字
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.Txt.AddColumn(System.String,System.Int32,System.Int32,System.Type)">
+ <summary>
+ 加入欄位名稱和字串截取的範圍
+ </summary>
+ <param name="ColumnName">加入欄位名稱</param>
+ <param name="Start">要傳回字元的開始位置,最小值為 1</param>
+ <param name="Length">要傳回的字元數</param>
+ <param name="ColumnType">設定欄位的型態</param>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.Txt.ReadTxtToDatatable(System.String)">
+ <summary>
+ 載入文字檔並輸出DataTable
+ </summary>
+ <param name="Text">如無輸入 Text，則檢查 FilePath 是否正確。如無設定 FilePath，將彈出 OpenFileDialog</param>
+</member>
+<member name="T:ModuleTool.XmlTools">
+ <summary>
+ XML工具
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.XmlTools.ConvertToDataTable(System.String)">
+ <summary>
+ 將 Xml 轉成 DataTable
+ </summary>
+ <param name="xml">輸入要轉換的 Xml</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.XmlTools.FormatXML(System.String)">
+ <summary>
+ 將 XML 排板
+ </summary>
+ <param name="xml">輸入要排版的 Xml</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:ModuleTool.ProgressBase">
+ <summary>
+ 回傳執行進度
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="E:ModuleTool.ProgressBase.ProgressMessages">
+ <summary>
+ 回傳資料庫操作之進度訊息
+ </summary>
+ <param name="str">當前資料庫操作之狀態訊息</param>
+ <remarks></remarks>
+</member>
+<member name="P:ModuleTool.ProgressBase.Executing">
+ <summary>
+ 設定一個不會傳回值的方法，來處理回傳資料庫操作之進度訊息
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:ModuleTool.ProgressBase.ProgressRange">
+ <summary>
+ 設定一個不會傳回值的方法，來處理回傳資料庫操作之進度起始筆數和最大筆數 (起始筆數, 最大筆數)
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:ModuleTool.ProgressBase.ProgressValue">
+ <summary>
+ 設定一個不會傳回值的方法，來處理回傳資料庫操作之進度筆數 (目前筆數)
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.ProgressBase.SetProgressRange(System.Int32,System.Int32)">
+ <summary>
+ 先判斷有無設定相關屬性，再執行 ProgressRange 的方法
+ </summary>
+ <param name="MinValue"></param>
+ <param name="MaxValue"></param>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.ProgressBase.Run(System.Int32)">
+ <summary>
+ 先判斷有無設定相關屬性，再執行 ProgressValue 的方法
+ </summary>
+ <param name="SetProgressValue"></param>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.ProgressBase.Run(System.String)">
+ <summary>
+ 先判斷有無設定相關屬性，再執行 Executing 的方法
+ </summary>
+ <param name="SetExecuting"></param>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.ProgressBase.Run(System.Int32,System.String)">
+ <summary>
+ 先判斷有無設定相關屬性，再執行 ProgressValue 和 Executing 的方法
+ </summary>
+ <param name="SetProgressValue"></param>
+ <param name="SetExecuting"></param>
+ <remarks></remarks>
+</member>
+<member name="T:ModuleTool.RandomExtensions">
+ <summary>
+ 
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.RandomExtensions.RealNextDouble(System.Random)">
+ <summary>
+ 產生0-1之間的實數亂數，由Random.NextDouble()實做
+ </summary>
+ <returns>0-1之間的亂數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.RandomExtensions.RealNextDouble(System.Random,System.Double,System.Double)">
+ <summary>
+ 產生指定範圍內的亂數，由Random.NextDouble()實做
+ </summary>
+ <param name="minValue">開始值</param>
+ <param name="maxValue">結束值</param>
+ <returns>亂數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.RandomExtensions.RealNext(System.Random,System.Int32,System.Int32)">
+ <summary>
+ 產生指定範圍內的整數亂數(包含最小值但不包括最大值，如需產生最大值請自行+1)，由Random.Next()實做
+ </summary>
+ <param name="minValue">開始值</param>
+ <param name="maxValue">結束值(亂數不包括最大值，如需產生最大值請自行+1)</param>
+ <returns>整數亂數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:ModuleTool.RandomExtensions.RealNextPNOne(System.Random)">
+ <summary>
+ 隨機產生 1 或 -1
+ </summary>
+ <returns>隨機的 1 或 -1</returns>
+ <remarks></remarks>
+</member>
+</members>
+</doc>

@@ -1,0 +1,164 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+ExcelToolForWin
+</name>
+</assembly>
+<members>
+<member name="T:ExcelToolForWin.My.Resources.Resources">
+<summary>
+  用於查詢當地語系化字串等的強類型資源類別。
+</summary>
+</member>
+<member name="P:ExcelToolForWin.My.Resources.Resources.ResourceManager">
+<summary>
+  傳回這個類別使用的快取的 ResourceManager 執行個體。
+</summary>
+</member>
+<member name="P:ExcelToolForWin.My.Resources.Resources.Culture">
+<summary>
+  覆寫目前執行緒的 CurrentUICulture 屬性，對象是所有
+  使用這個強類型資源類別的資源查閱。
+</summary>
+</member>
+<member name="P:ExcelToolForWin.ExcelMethod.ExcelFileNameExtension">
+ <summary>
+ 設定輸出的Excel類型
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:ExcelToolForWin.ExcelMethod.DialogResult">
+ <summary>
+ 代表表單在當做對話方塊使用時的結果。
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:ExcelToolForWin.ExcelMethod.GetSavePath">
+ <summary>
+ 取得儲存EXCEL的路徑
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:ExcelToolForWin.ExcelMethod.GetSavePath(System.String)">
+ <summary>
+ 取得儲存EXCEL的路徑
+ </summary>
+ <param name="FileName">設定輸出的檔案名稱</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:ExcelToolForWin.ExcelMethod.GetSavePath(ExcelToolForWin.ExcelMethod.ExcelFileNameExtensionEnum,System.String)">
+ <summary>
+ 取得儲存EXCEL的路徑
+ </summary>
+ <param name="SetExcelType">設定輸出的Excel類型</param>
+ <param name="FileName">設定輸出的檔案名稱</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:ExcelToolForWin.ExcelMethod.GetSavePath(System.Threading.CancellationTokenSource,System.Threading.Tasks.TaskScheduler)">
+ <summary>
+ 取得儲存EXCEL的路徑
+ </summary>
+ <param name="cts"></param>
+ <param name="uiContext"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:ExcelToolForWin.ExcelMethod.GetSavePath(System.String,System.Threading.CancellationTokenSource,System.Threading.Tasks.TaskScheduler)">
+ <summary>
+ 取得儲存EXCEL的路徑
+ </summary>
+ <param name="FileName">設定輸出的檔案名稱</param>
+ <param name="cts"></param>
+ <param name="uiContext"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:ExcelToolForWin.ExcelMethod.GetSavePath(ExcelToolForWin.ExcelMethod.ExcelFileNameExtensionEnum,System.String,System.Threading.CancellationTokenSource,System.Threading.Tasks.TaskScheduler)">
+ <summary>
+ 取得儲存EXCEL的路徑
+ </summary>
+ <param name="SetExcelType">設定輸出的Excel類型</param>
+ <param name="FileName">設定輸出的檔案名稱</param>
+ <param name="cts"></param>
+ <param name="uiContext"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:ExcelToolForWin.ExcelMethod.SaveFile(System.Action{System.String},System.String,System.Boolean)">
+ <summary>
+ 儲存EXCEL
+ </summary>
+ <param name="SaveMethod">儲存EXCEL檔案的方法</param>
+ <param name="FileName">設定輸出的檔案名稱</param>
+ <param name="OpenFile">是否打開匯出的EXCEL</param>
+ <remarks></remarks>
+</member>
+<member name="M:ExcelToolForWin.ExcelMethod.SaveFile(System.Action{System.String},ExcelToolForWin.ExcelMethod.ExcelFileNameExtensionEnum,System.String,System.Boolean)">
+ <summary>
+ 儲存EXCEL
+ </summary>
+ <param name="SaveMethod">儲存EXCEL檔案的方法</param>
+ <param name="SetExcelType">設定輸出的Excel類型</param>
+ <param name="FileName">設定輸出的檔案名稱</param>
+ <param name="OpenFile">是否打開匯出的EXCEL</param>
+ <remarks></remarks>
+</member>
+<member name="M:ExcelToolForWin.ExcelMethod.SaveFile(System.Action{System.String},System.String,System.Threading.CancellationTokenSource,System.Threading.Tasks.TaskScheduler,System.Boolean)">
+ <summary>
+ 儲存EXCEL
+ </summary>
+ <param name="SaveMethod">儲存EXCEL檔案的方法</param>
+ <param name="FileName">設定輸出的檔案名稱</param>
+ <param name="cts"></param>
+ <param name="uiContext"></param>
+ <param name="OpenFile">是否打開匯出的EXCEL</param>
+ <remarks></remarks>
+</member>
+<member name="M:ExcelToolForWin.ExcelMethod.SaveFile(System.Action{System.String},ExcelToolForWin.ExcelMethod.ExcelFileNameExtensionEnum,System.String,System.Threading.CancellationTokenSource,System.Threading.Tasks.TaskScheduler,System.Boolean)">
+ <summary>
+ 儲存EXCEL
+ </summary>
+ <param name="SaveMethod">儲存EXCEL檔案的方法</param>
+ <param name="SetExcelType">設定輸出的Excel類型</param>
+ <param name="FileName">設定輸出的檔案名稱</param>
+ <param name="cts"></param>
+ <param name="uiContext"></param>
+ <param name="OpenFile">是否打開匯出的EXCEL</param>
+ <remarks></remarks>
+</member>
+<member name="M:ExcelToolForWin.ExcelMethod.GetLoadPath">
+ <summary>
+ 取得載入的Excel路徑
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:ExcelToolForWin.ExcelMethod.GetLoadPaths">
+ <summary>
+ 取得載入的Excel路徑(多選)
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:ExcelToolForWin.ExportExcel.ProgressByInterval">
+ <summary>
+ Progress顯示時是否使用Interval
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:ExcelToolForWin.ExportExcel.SetProgressInterval(System.Boolean,System.Threading.Tasks.TaskScheduler)">
+ <summary>
+ 設定Progress執行時是否使用Interval
+ </summary>
+ <param name="useInterval"></param>
+ <param name="uiContext"></param>
+ <remarks></remarks>
+</member>
+</members>
+</doc>
